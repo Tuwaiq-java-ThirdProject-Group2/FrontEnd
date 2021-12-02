@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const GetDoctor=()=>{
+const GetInbox=()=>{
 
-const[Doctor,setDoctor] =useState();
+const[inbox,setInbox] =useState();
 
 useEffect(() => {
     axios.get("").then((r) => {
-     
+    
     });
   }, []);
 
@@ -15,4 +15,4 @@ useEffect(() => {
   return(<></>)
 
 }
-export default GetDoctor;
+export default GetInbox;

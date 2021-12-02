@@ -1,23 +1,21 @@
-const Card = ()=>{
-    return(<>
-    
-    <div className="doctor-maincard-container">
-    <div className="doctor-name">
-          <h5>Name</h5>
-        </div>
-        <div className="hospital-name">
-          <h5>hospital name</h5>
-        </div>
-        <div className="comment">
-          <h5>comment nsnvs vnsjnv nvsnvjs kjvnsjvsjn</h5>
-        </div>
-        <div>
-          <button>More</button>
-        </div>
+import { useEffect, useState } from "react";
+import axios from "axios";
+import MainCardData from "./MainCardData";
 
-    </div>
-        
-    </>)
-
-}
+const Card = () => {
+  const [doctor, setDoctor] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:8080/doctor").then((r) => {
+      setDoctor(r.data);
+      console.log(r.data);
+    });
+  }, []);
+  return (
+    <>
+      {doctor.map((e) => {
+        return <MainCardData data={e} />;
+      })}
+    </>
+  );
+};
 export default Card;
