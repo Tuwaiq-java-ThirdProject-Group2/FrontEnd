@@ -2,8 +2,7 @@
 function SearchBySpecialtiesData(Data){
 
     return(<>
-    {console.log("from data")}
-    {console.log(Data)}
+    <option>{Data.Data}</option>
     </>)
 
 }

@@ -28,8 +28,7 @@ useEffect(() => {
           <select>
               {/* نسوي ماب عشان نرسل كل الداتا لكوموبينت  */}
               {specialties.map((e)=>{
-          <SearchBySpecialtiesData Data={e.specialtyName}/>
-          console.log(e.specialtyName)
+         return <SearchBySpecialtiesData Data={e.specialtyName}/>
               
               })}
              
