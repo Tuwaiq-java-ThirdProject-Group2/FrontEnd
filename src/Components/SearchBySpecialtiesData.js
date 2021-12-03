@@ -1,9 +1,9 @@
 
-function SearchBySpecialtiesData(Data){
+function SearchBySpecialtiesData(data){
 
     return(<>
-    {console.log("from data")}
-    {console.log(Data)}
+    <option value={data.data.specialtyName}>{data.data.specialtyName}</option>
+    
     </>)
 
 }

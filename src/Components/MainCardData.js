@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const MainCardData = (data) => {
- console.log(data.data.name);
+ console.log(data.data);
   return (
     <>
       <div className="doctor-maincard-container">
