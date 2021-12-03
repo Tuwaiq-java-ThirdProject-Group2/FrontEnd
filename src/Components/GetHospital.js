@@ -6,13 +6,13 @@ const GetHospital=()=>{
 const[Hospital,setHospital] =useState();
 
 useEffect(() => {
-    axios.get("").then((r) => {
-     
+    axios.get("http://localhost:8080/hospital/numbersOfHospitals").then((r) => {
+     setHospital(r.data)
     });
   }, []);
 
 
-  return(<></>)
+  return(<><p>{Hospital}</p></>)
 
 }
 export default GetHospital;

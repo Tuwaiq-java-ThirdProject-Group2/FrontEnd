@@ -621,3 +621,27 @@ body{
 
   
 
+
+
+/*Admin Content*/
+.admin-content{
+  margin-left: 215px;
+  padding: 30px 15px;
+  width: calc(100% - 215px);
+
+}
+.admin-content .row{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.admin-content .row div{
+  width: 180px;
+  padding: 10px 5px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 15px;
+}

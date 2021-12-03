@@ -1,4 +1,5 @@
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 const LeftNavBar = () => {
   const history = useHistory();
 
@@ -21,7 +22,19 @@ const LeftNavBar = () => {
             }}
             href="#news"
           >
-Inbox          </a>
+    Inbox    </a>
+
+<Link to="/requests">RequestsNew</Link>
+    <a
+            onClick={() => {
+              history.replace("requests");
+            }}
+           
+          >
+    Resquests    </a>
+ 
+    
+
           <a href="#contact">Request</a>
         </div>
       </div>
