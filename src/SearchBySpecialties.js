@@ -19,6 +19,7 @@ const SearchBySpecialties = () => {
       //console.log(r.data)
     });
   }, []);
+
   let a;
   return (
     <>
