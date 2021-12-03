@@ -1,8 +1,9 @@
 
-function SearchBySpecialtiesData(Data){
+function SearchBySpecialtiesData(data){
 
     return(<>
     <option>{Data.Data}</option>
+
     </>)
 
 }
