@@ -20,7 +20,7 @@ useEffect(() => {
     }).catch((err)=> {
         console.log(err)
       });
-  }, []);
+  }, [data]);
   console.log(url,data.data);
 
   console.log(doctor);
