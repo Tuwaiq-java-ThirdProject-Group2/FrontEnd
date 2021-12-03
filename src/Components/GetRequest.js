@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import LeftNavBar from "./LeftNavBar";
 
 const GetRequest=()=>{
 
@@ -13,7 +14,15 @@ useEffect(() => {
   }, []);
 
 
-  return(<></>)
+  return(<>
+      <LeftNavBar />
+      <div className="admin-content">
+            <h3>Requests</h3>
+            {/* طلبات الدكاترة */}
+          <GetRequest/>
+      </div>
+
+  </>)
 
 }
 export default GetRequest;

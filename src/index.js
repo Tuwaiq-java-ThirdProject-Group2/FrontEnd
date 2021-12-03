@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter,Switch } from "react-router-dom";
 import AdminPage from "./AdminPage";
 // import Signup from "../../SecondProject/Twitter/src/Components/Signup";
 import App from "./App";
+import GetRequest from "./Components/GetRequest";
 import MainSearch from "./MainSearch";
 
 import reportWebVitals from "./reportWebVitals";
@@ -12,11 +13,15 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+   
     <Route path="/MainPage" component={App}/>
     <Route path="/MainSearch" component={MainSearch}/>
+    <Route path="/requests" component={GetRequest}/>
     <Route path="/adminpage" component={AdminPage}/>
     {/* <Route path="/MainSearch" component={Login}/> */}
     {/* <Route path="/MainSearch" component={Signup}/> */}
+   
+   
 
     </BrowserRouter>
   </React.StrictMode>,

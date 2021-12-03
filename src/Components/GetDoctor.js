@@ -3,16 +3,17 @@ import axios from "axios";
 
 const GetDoctor=()=>{
 
-const[Doctor,setDoctor] =useState();
+const[Doctor,setDoctor] =useState(0);
 
 useEffect(() => {
-    axios.get("").then((r) => {
+    axios.get("http://localhost:8080/doctor/numbersOfDoctors").then((r) => {
+      setDoctor(r.data);
      
     });
   }, []);
 
 
-  return(<></>)
+  return(<><p>{Doctor}</p></>)
 
 }
 export default GetDoctor;
