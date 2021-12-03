@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import SearchBySpecialtiesData from "./Components/SearchBySpecialtiesData";
 import DoctorsCardByspecialty from "./Components/DoctorsCardByspecialty";
@@ -6,7 +7,8 @@ import DoctorsCardByspecialty from "./Components/DoctorsCardByspecialty";
 const SearchBySpecialties = () => {
   // هنا نخزن كل التخصصات
   const [specialties, setSpecialties] = useState([]);
-  const[search,setSearch] = useState("");
+  const[search,setSearch] = useState("Segrey");
+  const history = useHistory();
 
   //هنا تحط رابط  API  لكل التخصصات
   useEffect(() => {
