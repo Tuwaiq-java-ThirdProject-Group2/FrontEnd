@@ -1,8 +1,9 @@
 
-const SearchBySpecialtiesData=(Data)=>{
-    console.log(Data);
+function SearchBySpecialtiesData(Data){
+
     return(<>
-    <option className="option-container">{Data}</option>
+    {console.log("from data")}
+    {console.log(Data)}
     </>)
 
 }
