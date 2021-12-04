@@ -1,9 +1,10 @@
-const Card = () => {
+const Card = (data) => {
+  console.log(data);
   return (
     <>
       <div className="doctor-card-container">
         <div className="doctor-name">
-          <h5>Name</h5>
+          <h5>Test</h5>
         </div>
         <div className="hospital-name">
           <h5>hospital name</h5>
