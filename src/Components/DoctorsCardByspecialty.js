@@ -1,32 +1,28 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Card from "./MainCard";
+import CardSearch from "./CardSearch";
 const DoctorsCardByspecialty=(data)=>{
-console.log("data is",data.data);
 
 const [doctor, setDoctor] = useState([]);
 
 const [specialties, setSpecialties] = useState(data.data);
 let url = "http://localhost:8080/specialties/findBySpecialties/"+data.data;
-console.log(url);
 useEffect(() => {
     axios.get(url).then((r) => {
-      setDoctor(r);
-      console.log(r);
-      console.log(url,specialties);
-      console.log(specialties);
+      setDoctor(r.data);
+    console.log("doctor",r.data);
 
 
     }).catch((err)=> {
         console.log(err)
       });
   }, [data]);
-  console.log(url,data.data);
-
-  console.log(doctor);
+  
 return(
 <>
-<Card/>
+{doctor.map((e)=>{
+    return <CardSearch data={e}/>
+})}
 </>)
 }
 export default DoctorsCardByspecialty;
