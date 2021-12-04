@@ -5,11 +5,11 @@ const Navbar = () => {
   return (
     <>
       <div class="topnav">
-        <a onClick={()=>{history.replace("MainPage")}} class="active" >
+        <a href="http://localhost:3000/MainPage" class="active" >
           Home
         </a>
-        <a onClick={()=>{history.replace("MainSearch")}} >Search By Name</a>
-        <a onClick={()=>{history.replace("MainSearch/SearchBySpecialties")}}>Search By Specialties</a>
+        <a href="http://localhost:3000/MainSearch/SearchByName" >Search By Name</a>
+        <a href="http://localhost:3000/MainSearch/SearchBySpecialties">Search By Specialties</a>
         <a >Search By Location</a>
       </div>
     </>

@@ -9,7 +9,7 @@ const[user,setUser] = useState(0);
 useEffect(() => {
     axios.get("http://localhost:8080/user/numbersofuser").then((r) => {
       setUser(r.data);
-      console.log(r.data);
+    //   console.log(r.data);
       //console.log(user);
     });
   }, []);
