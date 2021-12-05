@@ -10,6 +10,7 @@ function Comment(data) {
       .delete("http://localhost:8080/evaluation/" + data.data.evaluationId)
       .then((res) => {
         console.log(1);
+        window.location.reload();
       })
       .catch((err) => {
         console.log(err);
@@ -20,7 +21,7 @@ function Comment(data) {
   return (
     <div className="comment-container">
       <div className="comment">{data.data.comment}</div>
-      <button className="btn-delete" onClick={remove}>
+      <button id ="det" className="btn-delete" onClick={remove}>
         Delete
       </button>
     </div>
