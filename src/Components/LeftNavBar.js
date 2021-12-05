@@ -7,21 +7,11 @@ const LeftNavBar = () => {
     <>
       <div class="leftnav-container">
         <div class="leftnav">
-          <a
-            onClick={() => {
-              history.replace("");
-            }}
-            class="active"
-            href="#home"
-          >
-            Home
-          </a>
+          <a href="http://localhost:3000/adminpage/Home">Home</a>
           <a href="http://localhost:3000/adminpage/inbox">Inbox </a>
+          {/* <a href="/MainSearch/doctorprofile/1">Resquests </a> */}
 
-         
-          <a href="/MainSearch/doctorprofile/1">Resquests </a>
-
-          <a href="#contact">Request</a>
+          <a href="http://localhost:3000/adminpage/request">Request</a>
         </div>
       </div>
     </>

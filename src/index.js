@@ -5,7 +5,7 @@ import { Route, BrowserRouter,Switch } from "react-router-dom";
 import AdminPage from "./AdminPage";
 // import Signup from "../../SecondProject/Twitter/src/Components/Signup";
 import App from "./App";
-import GetRequest from "./Components/GetRequest";
+import GetRequest from "./GetRequest";
 import MainSearch from "./MainSearch";
 
 import reportWebVitals from "./reportWebVitals";

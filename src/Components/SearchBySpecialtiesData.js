@@ -2,7 +2,7 @@
 function SearchBySpecialtiesData(data){
 
     return(<>
-    <option value={data.data.specialtyName}>{data.data.specialtyName}</option>
+    <option value={data.data.specialtiesId}>{data.data.specialtyName}</option>
     
     </>)
 
