@@ -28,6 +28,7 @@ function App() {
             <Card />
             <Card />
             <AddDoctorRecord />
+           
           </div>
           <div></div>
         </div>
