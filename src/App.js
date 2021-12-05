@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import line from "./images/line.png";
 import Card from "./Components/Card";
 import MainCard from "./Components/MainCard";
+import AddDoctorRecord from "./Components/AddDoctorRecord";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <MainCard />
             <Card />
             <Card />
+            <AddDoctorRecord />
           </div>
           <div></div>
         </div>
