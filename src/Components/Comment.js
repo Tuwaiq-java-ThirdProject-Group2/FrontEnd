@@ -5,15 +5,22 @@ import axios from "axios";
 import { useCallback } from "react";
 
 function Comment(data) {
-  function remove(e){
-    axios.delete("http://localhost:8080/evaluation/");
+  function remove(e) {
+    axios
+      .delete("http://localhost:8080/evaluation/" + data.data.evaluationId)
+      .then((res) => {
+        console.log(1);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     console.log(e);
-  } 
+  }
   console.log(data);
   return (
     <div className="comment-container">
       <div className="comment">{data.data.comment}</div>
-      <button className="btn-delete" onClick={remove(data.data.evaluationId)}>
+      <button className="btn-delete" onClick={remove}>
         Delete
       </button>
     </div>

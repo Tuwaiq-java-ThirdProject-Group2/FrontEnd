@@ -1,9 +1,10 @@
 import { useState,useEffect  } from "react";
 import axios from "axios";
 import SearchByNameData from "./Components/SearchByNameData";
+import DoctorsCardByName from "./Components/DoctorsCardByName";
 
 const SearchByName = () => {
-
+  const[search,setSearch] = useState();
   const [doctors,setDoctors] = useState([]);
   const[name,setName] = useState([]);
 
@@ -13,36 +14,21 @@ const SearchByName = () => {
   
 
   
-  useEffect(() => {
-    axios.get("http://localhost:8080/doctor")
-      .then((r) => {
-        setDoctors(r.data);
-       
-      })
-      .catch((err)=> {
-        console.log(err)
-      });
-  }, []);
   
+  let a;
+
   return (
     <>
-    {doctors.map((e)=>{
-        //  { لما تكتب حاجة بالخانة الاولى حقت الاسم الاول ويحصل ويكون نفس الاسم موجد بالداتا بيس راح ينطبع الاسم من الكمبوننت اللي اسمه تحت}
-         if(e.name===name){
-           return <SearchByNameData Data={name}/>
-           
-         }
-             
-             })}
-            
-      <form>
+                
         <div className="form-searchbyname-container">
-          <input onChange={getName} placeholder="Enter first name " />
-          <input placeholder="Enter last name " />
-          <button >Search</button>
+          <input id="name"  placeholder="Enter first name " />
+          <button  onClick={() => {
+            a = document.getElementById("name").value;
+            console.log(a);
+            setSearch(a);
+          }}>Search</button>
         </div>
-      </form>
-      
+      <DoctorsCardByName data={search}/>
 
     </>
   );
