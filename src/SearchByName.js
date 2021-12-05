@@ -1,9 +1,12 @@
 import { useState,useEffect  } from "react";
 import axios from "axios";
+import SearchByNameData from "./Components/SearchByNameData";
+import DoctorsCardByName from "./Components/DoctorsCardByName";
 import CardSearch from "./Components/CardSearch";
 
-const SearchByName = () => {
 
+const SearchByName = () => {
+  const[search,setSearch] = useState();
   const [doctors,setDoctors] = useState([]);
   const[name,setName] = useState("m");
 
@@ -13,43 +16,22 @@ const SearchByName = () => {
   
 
   
-  useEffect(() => {
-    axios.get("http://localhost:8080/doctor")
-      .then((r) => {
-        setDoctors(r.data);
-       
-      })
-      .catch((err)=> {
-        console.log(err)
-      });
-  }, []);
-  let n
+  
+  let a;
+
   return (
     <>
-    <div className= "my_Container">
-    {doctors.map((e)=>{
-        //  { لما تكتب حاجة بالخانة الاولى حقت الاسم الاول ويحصل ويكون نفس الاسم موجد بالداتا بيس راح ينطبع الاسم من الكمبوننت اللي اسمه تحت}
-         if(e.name===name){
-           console.log(name); 
-         }   
-             })}
-            
-      <form>
+                
         <div className="form-searchbyname-container">
-        <div className="search-container">
-          <input id="name" placeholder="Enter doctor name " />
-          </div>
-        </div>
-      </form>
-      <div>
-        {/* طلعت الزر برى الفورم لانه كان يسوي مشاكل جوه */}
-      <button  onClick={() => {
-            n = document.getElementById("name").value;
-            setName(n);
-            //console.log(n);
+          <input id="name"  placeholder="Enter first name " />
+          <button  onClick={() => {
+            a = document.getElementById("name").value;
+            console.log(a);
+            setSearch(a);
           }}>Search</button>
+        </div>
+      <DoctorsCardByName data={search}/>
 
-      </div>
 
       {/* <CardSearch data={name}/>      الكمبوننت هذا يسوي خطأ لما تشيل الكومنت عنه */}
       </div>

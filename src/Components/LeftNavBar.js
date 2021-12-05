@@ -16,24 +16,10 @@ const LeftNavBar = () => {
           >
             Home
           </a>
-          <a
-            onClick={() => {
-              history.replace("MainSearch");
-            }}
-            href="#news"
-          >
-    Inbox    </a>
+          <a href="http://localhost:3000/adminpage/inbox">Inbox </a>
 
-<Link to="/requests">RequestsNew</Link>
-    <a
-            onClick={() => {
-              history.replace("requests");
-            }}
-           
-          >
-    Resquests    </a>
- 
-    
+         
+          <a href="/MainSearch/doctorprofile/1">Resquests </a>
 
           <a href="#contact">Request</a>
         </div>

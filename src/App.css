@@ -645,3 +645,55 @@ body{
   text-align: center;
   margin-right: 15px;
 }
+
+/* comment  */
+.comment-container{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #2f195f;
+  width: 100%;
+  padding: 40px;
+}
+.inbox-container{
+  margin-top: 50px;
+  margin-left: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+  width: 100%;
+  /* border: 1px solid khaki; */
+  row-gap: 20px;
+}
+.btn-accept{
+
+  background-color: lawngreen;
+  color: white;
+  border: lawngreen;
+  transition: 0.5s;
+  width: 150px;
+  height: 35px;
+  border-radius: 2px;
+  background-color: lawngreen;
+}
+.btn-accept:hover {
+  background-color: white;
+  color: lawngreen;
+  border: 1px solid lawngreen;
+}
+.btn-delete{
+  float: right;
+  margin-left: 20px;
+  background-color: #8f0101;
+  color: white;
+  border: #8f0101;
+  transition: 0.5s;
+  width: 150px;
+  height: 35px;
+  border-radius: 2px;
+}
+.btn-delete:hover {
+  background-color: white;
+  color: #8f0101;
+  border: 1px solid #8f0101;
+}
