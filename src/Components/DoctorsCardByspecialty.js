@@ -4,9 +4,9 @@ import CardSearch from "./CardSearch";
 const DoctorsCardByspecialty=(data)=>{
 
 const [doctor, setDoctor] = useState([]);
-
+console.log(data.data);
 const [specialties, setSpecialties] = useState(data.data);
-let url = "http://localhost:8080/specialties/findBySpecialties/"+data.data;
+let url = "http://localhost:8080/specialties/findBySpecialtiesId/"+data.data;
 useEffect(() => {
     axios.get(url).then((r) => {
       setDoctor(r.data);

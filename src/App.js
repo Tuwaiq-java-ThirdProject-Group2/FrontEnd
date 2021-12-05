@@ -24,9 +24,7 @@ function App() {
             <h1 className="OBD">top doctors of the week</h1>
           </div>
           <div className ="mainpage-card-container">
-            <MainCard />
-            <Card />
-            <Card />
+            {/* <Card /> */}
             <AddDoctorRecord />
           </div>
           <div></div>
