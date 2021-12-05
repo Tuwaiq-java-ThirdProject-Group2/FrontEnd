@@ -2,11 +2,13 @@ import { useState,useEffect  } from "react";
 import axios from "axios";
 import SearchByNameData from "./Components/SearchByNameData";
 import DoctorsCardByName from "./Components/DoctorsCardByName";
+import CardSearch from "./Components/CardSearch";
+
 
 const SearchByName = () => {
   const[search,setSearch] = useState();
   const [doctors,setDoctors] = useState([]);
-  const[name,setName] = useState([]);
+  const[name,setName] = useState("m");
 
   const getName= (e) => {
     setName(e.target.value)
@@ -30,6 +32,9 @@ const SearchByName = () => {
         </div>
       <DoctorsCardByName data={search}/>
 
+
+      {/* <CardSearch data={name}/>      الكمبوننت هذا يسوي خطأ لما تشيل الكومنت عنه */}
+      </div>
     </>
   );
 };
