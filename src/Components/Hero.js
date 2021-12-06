@@ -13,7 +13,7 @@ const Hero = () => {
             <button>login</button>
             
             <img className="or" src={or}/>
-            <p className="size24 white bottom">Create account</p>
+            <p className="createAccountStyle  bottom">Create account</p>
           </div>
           <div>
             <SearchHero/>
