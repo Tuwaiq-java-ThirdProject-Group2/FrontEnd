@@ -47,11 +47,12 @@ export default function AddDoctorRecord() {
     let certificate_name = document.querySelector("#Cname").value;
     let certificate_date = document.querySelector("#datemax").value;
     let special = document.getElementById("specialty").value;
+    let sectionNum =document.getElementById("section").value;
     let doctorId = 45;
     console.log(special);
     let specialtyId = special;
     let contractId = 2;
-    let sectionId = 855;
+    let sectionId = sectionNum;
     let x = {
       doctor: { doctorId, name, certificate_name, certificate_date },
       contractId,
@@ -63,7 +64,7 @@ export default function AddDoctorRecord() {
     fetch("http://localhost:8080/doctor", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(x, contractId, sectionId, specialtyId),
+      body: JSON.stringify(x),
     }).then((e) => {
       console.log("New Doctor Added", e);
     });
@@ -88,7 +89,7 @@ export default function AddDoctorRecord() {
           return <SearchBySpecialtiesData data={e} />;
         })}
       </select>{" "}
-      <select id="specialty">
+      <select id="section">
         {section.map((e) => {
           return <SearchBysectionData data={e} />;
         })}

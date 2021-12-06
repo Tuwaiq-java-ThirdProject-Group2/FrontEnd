@@ -25,10 +25,13 @@ function App() {
             <h1 className="OBD">top doctors of the week</h1>
           </div>
           <div className ="mainpage-card-container">
+            <Card />
+            {/* <AddDoctorRecord /> */}
             {/* <Card /> */}
             <AddDoctorRecord />
           {/* < AddEvaluationRecord />
             */}
+
           </div>
           <div></div>
         </div>
