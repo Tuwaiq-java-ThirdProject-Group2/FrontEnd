@@ -6,6 +6,7 @@ import line from "./images/line.png";
 import Card from "./Components/Card";
 import MainCard from "./Components/MainCard";
 import AddDoctorRecord from "./Components/AddDoctorRecord";
+import AddEvaluationRecord from "./Components/AddEvaluationRecord";
 
 
 function App() {
@@ -26,6 +27,11 @@ function App() {
           <div className ="mainpage-card-container">
             <Card />
             {/* <AddDoctorRecord /> */}
+            {/* <Card /> */}
+            <AddDoctorRecord />
+          {/* < AddEvaluationRecord />
+            */}
+
           </div>
           <div></div>
         </div>
